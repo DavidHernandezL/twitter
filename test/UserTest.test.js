@@ -14,4 +14,12 @@ describe('User', () => {
         expect(typeof(user2.lastUpdated)).toBe("object");
         
     });
+
+    test('3) Getters from User', () => {
+        const user = new User(1, 'Pato', 'David', 'bio');
+        expect(user.getUsername()).toBe('username');
+        expect(user.getBio()).toBe('bio');
+        expect(user.getDateCreated()).toBeInstanceOf(Date);
+    });
+
 });
