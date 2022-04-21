@@ -5,7 +5,13 @@ describe('User', () => {
         const user = new User(1, 'username', 'David', 'bio', new Date(), new Date());
         expect(user.id).toBe(1);
         expect(user.username).toBe('username');
-        expect(user.name).toBe('name');
+        expect(user.name).toBe('David');
         expect(user.bio).toBe('bio');
+    });
+
+    test('2) Created User with default date', () => {
+        const user2 =  new User("patoFeliz", "David", "bio");
+        expect(typeof(user2.lastUpdated)).toBe("object");
+        
     });
 });
